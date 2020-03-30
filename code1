@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+
+	int  Arrival_time[100],Burst_time[100],Priority[100],Process[100],Turn_around_time[100],Waiting_time[100] ;
+	  int temp,position, size;
+	
+	 cout<<"how many process you want to enter : ";
+         cin>>size;
+	for(int i=0;i<size;i++)
+	{   
+	    cout<<" priority of P"<<i+1<<" : \n";
+		cin>>Priority[i];
+		cout<<" Arrival time of P"<<i+1<<" : \n";
+		cin>>Arrival_time[i];	
+		cout<<" brust time of P"<<i+1<<" : \n";
+		cin>>Burst_time[i];
+		Process[i]=i+1;
+	} 
+	 cout<<"\nProcess\t\tPriority\tArival time\tBurst time";    
+	 for(int i=0;i<size;i++)     
+	 {         
+	    cout<<"\nP"<<i+1<<"\t\t"<<Priority[i]<<"\t\t"<<Arrival_time[i]<<"\t\t"<<Burst_time[i];     
+	}
