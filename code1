@@ -23,3 +23,29 @@ int main()
 	 {         
 	    cout<<"\nP"<<i+1<<"\t\t"<<Priority[i]<<"\t\t"<<Arrival_time[i]<<"\t\t"<<Burst_time[i];     
 	}
+for(int i=0;i<size;i++)
+{  position = i;
+for(int j=i+1;j<=size;j++){
+
+	if(Priority[j] < Priority[position])
+	{ 
+	    position=j;	
+	}
+}
+
+ temp=Priority[i];
+ Priority[i]=Priority[position];
+ Priority[position]=temp;
+ 
+ temp=Arrival_time[i];
+ Arrival_time[i]=Arrival_time[position];
+ Arrival_time[position]=temp;
+ 
+ temp=Burst_time[i];
+ Burst_time[i]=Burst_time[position];
+ Burst_time[position]=temp;
+
+ temp=Process[i];
+ Process[i]=Process[position];
+ Process[position]=temp;
+}
